@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b6llask0t4a2p" path="res://scence/coin.tscn" id="5_r65ri"]
 [ext_resource type="PackedScene" uid="uid://cdirqj1u0hoou" path="res://scence/killzone.tscn" id="6_lpjcr"]
 [ext_resource type="PackedScene" uid="uid://ck0nktsph4dc6" path="res://scence/enemy.tscn" id="7_xw1vj"]
+[ext_resource type="FontFile" uid="uid://bisgvnefyijce" path="res://accets/brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="8_tc2ms"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eslab"]
 texture = ExtResource("1_83jip")
@@ -298,3 +299,20 @@ position = Vector2(234, 83)
 
 [node name="enemy" parent="enemys" unique_id=1882910762 instance=ExtResource("7_xw1vj")]
 position = Vector2(316, 110)
+
+[node name="Label" type="Label" parent="." unique_id=1515599299]
+offset_left = 457.0
+offset_top = 304.0
+offset_right = 629.0
+offset_bottom = 320.0
+theme_override_fonts/font = ExtResource("8_tc2ms")
+text = "space to jump"
+
+[node name="Label2" type="Label" parent="." unique_id=1032575544]
+offset_left = 684.0
+offset_top = 369.0
+offset_right = 764.0
+offset_bottom = 380.0
+theme_override_fonts/font = ExtResource("8_tc2ms")
+theme_override_font_sizes/font_size = 10
+text = "fall is bad..."

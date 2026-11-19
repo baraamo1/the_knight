@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://gcwn2xj18jvy"]
 
 [ext_resource type="Texture2D" uid="uid://diltvpt5u4787" path="res://accets/brackeys_platformer_assets/sprites/world_tileset.png" id="1_83jip"]
+[ext_resource type="Script" uid="uid://ome84dsgt1h" path="res://scripts/game_maneger.gd" id="1_ed7tm"]
 [ext_resource type="PackedScene" uid="uid://72kr8c4l52xx" path="res://scence/player.tscn" id="1_gikdm"]
 [ext_resource type="Script" uid="uid://by3frbp0lgoa8" path="res://scripts/player.gd" id="2_bg5qw"]
 [ext_resource type="PackedScene" uid="uid://7wmnn4nb6qge" path="res://scence/platform.tscn" id="4_eslab"]
@@ -217,6 +218,19 @@ _data = {
 
 [node name="game" type="Node2D" unique_id=1454830997]
 
+[node name="gameManeger" type="Node" parent="." unique_id=1839231073]
+unique_name_in_owner = true
+script = ExtResource("1_ed7tm")
+
+[node name="scorelabel" type="Label" parent="gameManeger" unique_id=2050833511]
+offset_left = 106.0
+offset_top = 62.0
+offset_right = 247.0
+offset_bottom = 75.0
+theme_override_fonts/font = ExtResource("8_tc2ms")
+theme_override_font_sizes/font_size = 12
+text = "You got x coins"
+
 [node name="TileMap" type="TileMap" parent="." unique_id=328179007]
 position = Vector2(532, 331)
 tile_set = SubResource("TileSet_lrn7f")
@@ -300,7 +314,9 @@ position = Vector2(234, 83)
 [node name="enemy" parent="enemys" unique_id=1882910762 instance=ExtResource("7_xw1vj")]
 position = Vector2(316, 110)
 
-[node name="Label" type="Label" parent="." unique_id=1515599299]
+[node name="labels" type="Node" parent="." unique_id=1535185461]
+
+[node name="Label" type="Label" parent="labels" unique_id=1515599299]
 offset_left = 457.0
 offset_top = 304.0
 offset_right = 629.0
@@ -308,11 +324,35 @@ offset_bottom = 320.0
 theme_override_fonts/font = ExtResource("8_tc2ms")
 text = "space to jump"
 
-[node name="Label2" type="Label" parent="." unique_id=1032575544]
+[node name="Label2" type="Label" parent="labels" unique_id=1032575544]
 offset_left = 684.0
 offset_top = 369.0
-offset_right = 764.0
+offset_right = 783.0
 offset_bottom = 380.0
 theme_override_fonts/font = ExtResource("8_tc2ms")
 theme_override_font_sizes/font_size = 10
 text = "fall is bad..."
+
+[node name="Label3" type="Label" parent="labels" unique_id=2107140947]
+offset_left = 540.0
+offset_top = 173.0
+offset_right = 698.0
+offset_bottom = 189.0
+theme_override_fonts/font = ExtResource("8_tc2ms")
+text = "almost there"
+
+[node name="Label4" type="Label" parent="labels" unique_id=531678618]
+offset_left = 313.0
+offset_top = 90.0
+offset_right = 409.0
+offset_bottom = 113.0
+theme_override_fonts/font = ExtResource("8_tc2ms")
+text = "Mr Boss"
+
+[node name="Label5" type="Label" parent="labels" unique_id=1242154926]
+offset_left = 136.0
+offset_top = 29.0
+offset_right = 228.0
+offset_bottom = 45.0
+theme_override_fonts/font = ExtResource("8_tc2ms")
+text = "THE END"

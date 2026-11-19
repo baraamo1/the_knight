@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://72kr8c4l52xx" path="res://scence/player.tscn" id="1_gikdm"]
 [ext_resource type="Script" uid="uid://by3frbp0lgoa8" path="res://scripts/player.gd" id="2_bg5qw"]
 [ext_resource type="PackedScene" uid="uid://7wmnn4nb6qge" path="res://scence/platform.tscn" id="4_eslab"]
+[ext_resource type="PackedScene" uid="uid://b6llask0t4a2p" path="res://scence/coin.tscn" id="5_r65ri"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eslab"]
 texture = ExtResource("1_83jip")
@@ -231,3 +232,12 @@ position = Vector2(645, 352)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="platform" unique_id=1854432264]
 libraries/ = SubResource("AnimationLibrary_lpjcr")
 autoplay = &"move"
+
+[node name="coin" parent="." unique_id=479911243 instance=ExtResource("5_r65ri")]
+position = Vector2(604, 337)
+
+[node name="coin2" parent="." unique_id=1794456818 instance=ExtResource("5_r65ri")]
+position = Vector2(749, 334)
+
+[node name="coin3" parent="." unique_id=1930748816 instance=ExtResource("5_r65ri")]
+position = Vector2(475, 304)

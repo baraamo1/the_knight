@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ck0nktsph4dc6"]
 
+[ext_resource type="Script" uid="uid://tplpctam0wa1" path="res://scripts/enemy.gd" id="1_0p8j0"]
 [ext_resource type="Texture2D" uid="uid://b7crqx3wdudwt" path="res://accets/brackeys_platformer_assets/sprites/slime_green.png" id="1_355ya"]
 [ext_resource type="PackedScene" uid="uid://cdirqj1u0hoou" path="res://scence/killzone.tscn" id="2_0p8j0"]
 
@@ -44,6 +45,7 @@ size = Vector2(8, 11)
 
 [node name="enemy" type="Node2D" unique_id=1882910762]
 position = Vector2(0, -7)
+script = ExtResource("1_0p8j0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1325022892]
 position = Vector2(0, 1)
@@ -58,3 +60,11 @@ collision_mask = 1
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone" unique_id=449885906]
 position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_lrn7f")
+
+[node name="RayCastRight" type="RayCast2D" parent="." unique_id=192799969]
+position = Vector2(0, 6)
+target_position = Vector2(7, 1)
+
+[node name="RayCastLeft" type="RayCast2D" parent="." unique_id=267359229]
+position = Vector2(0, 6)
+target_position = Vector2(-6, 1)

@@ -240,7 +240,7 @@ limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="killzone" parent="." unique_id=775617350 instance=ExtResource("6_lpjcr")]
-position = Vector2(581, 492)
+position = Vector2(582, 429)
 collision_mask = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone" unique_id=510344398]
@@ -297,16 +297,4 @@ position = Vector2(234, 83)
 [node name="enemys" type="Node" parent="." unique_id=1298015384]
 
 [node name="enemy" parent="enemys" unique_id=1882910762 instance=ExtResource("7_xw1vj")]
-position = Vector2(653, 318)
-
-[node name="enemy2" parent="enemys" unique_id=2053857331 instance=ExtResource("7_xw1vj")]
-position = Vector2(892, 302)
-
-[node name="enemy4" parent="enemys" unique_id=1943445411 instance=ExtResource("7_xw1vj")]
-position = Vector2(476, 126)
-
-[node name="enemy5" parent="enemys" unique_id=1391868383 instance=ExtResource("7_xw1vj")]
-position = Vector2(221, 78)
-
-[node name="enemy6" parent="enemys" unique_id=625528948 instance=ExtResource("7_xw1vj")]
-position = Vector2(268, 78)
+position = Vector2(316, 110)

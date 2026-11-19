@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://by3frbp0lgoa8" path="res://scripts/player.gd" id="2_bg5qw"]
 [ext_resource type="PackedScene" uid="uid://7wmnn4nb6qge" path="res://scence/platform.tscn" id="4_eslab"]
 [ext_resource type="PackedScene" uid="uid://b6llask0t4a2p" path="res://scence/coin.tscn" id="5_r65ri"]
+[ext_resource type="PackedScene" uid="uid://cdirqj1u0hoou" path="res://scence/killzone.tscn" id="6_lpjcr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eslab"]
 texture = ExtResource("1_83jip")
@@ -209,6 +210,9 @@ _data = {
 &"move": SubResource("Animation_r65ri")
 }
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_lrn7f"]
+distance = -1.0
+
 [node name="game" type="Node2D" unique_id=1454830997]
 
 [node name="TileMap" type="TileMap" parent="." unique_id=328179007]
@@ -224,6 +228,11 @@ script = ExtResource("2_bg5qw")
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=728228506]
 position = Vector2(14, 12)
 zoom = Vector2(4, 4)
+limit_left = -9999633
+limit_top = -9999954
+limit_right = 10000367
+limit_bottom = 550
+limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="platform" parent="." unique_id=1208405739 instance=ExtResource("4_eslab")]
@@ -241,3 +250,11 @@ position = Vector2(749, 334)
 
 [node name="coin3" parent="." unique_id=1930748816 instance=ExtResource("5_r65ri")]
 position = Vector2(475, 304)
+
+[node name="killzone" parent="." unique_id=775617350 instance=ExtResource("6_lpjcr")]
+position = Vector2(551, 413)
+collision_mask = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone" unique_id=510344398]
+position = Vector2(2, 0)
+shape = SubResource("WorldBoundaryShape2D_lrn7f")

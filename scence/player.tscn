@@ -48,7 +48,7 @@ collision_mask = 7
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1840417140]
 sprite_frames = SubResource("SpriteFrames_xiplf")
 autoplay = "default"
-frame_progress = 0.71147656
+frame_progress = 0.3869778
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1725066767]
 position = Vector2(0, 6)
